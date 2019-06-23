@@ -1,12 +1,5 @@
-FROM node:6.17-alpine as init
+FROM pontusvisiongdpr/pontus-formio
 
-RUN apk upgrade -q --no-cache
-RUN apk add -q --no-cache \
-      git \
-      bash \
-      gettext \
-      unzip \
-      zip
 
 RUN addgroup -g 11000 -S formio && \
     adduser -S formio -u 11000 
